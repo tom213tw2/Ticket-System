@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Ticket_System</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Comman.Dapper">
+      <HintPath>D:\WebStroage\Comman.Dapper\Comman.Dapper\obj\Release\netcoreapp3.1\Comman.Dapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
