@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Comman.Dapper">
+      <HintPath>D:\WebStroage\Comman.Dapper\Comman.Dapper\obj\Release\netcoreapp3.1\Comman.Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="OcConfigSettings">
+      <HintPath>D:\Work\一銀\04.Source\Web\OctonLibrary\OctonLibrary\dll\OcConfigSettings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\DB\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.SimpleCRUD" Version="2.3.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+</Project>

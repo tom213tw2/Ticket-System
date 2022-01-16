@@ -6,9 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Comman.Dapper">
       <HintPath>D:\WebStroage\Comman.Dapper\Comman.Dapper\obj\Release\netcoreapp3.1\Comman.Dapper.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\TicketSystem\Data\" />
+    <Folder Include="Areas\TicketSystem\Models\" />
   </ItemGroup>
 
 </Project>
