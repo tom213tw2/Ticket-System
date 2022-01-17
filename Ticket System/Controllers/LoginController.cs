@@ -42,7 +42,7 @@ namespace Ticket_System.Controllers
             {
                 HttpContext.Session.Clear();
                 HttpContext.Session.Set("AccoutID", Status.login.Sno.ToByteArray());
-                return RedirectToAction("List", "Account");
+                return RedirectToAction("List", "Ticket");
             }
 
 

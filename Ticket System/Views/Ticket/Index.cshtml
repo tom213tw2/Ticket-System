@@ -1,0 +1,25 @@
+﻿@model Ticket_System.ViewModel.TicketModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Index","Ticket",FormMethod.Post,new {@id="Form"}))
+{
+    @Html.HiddenFor(s=>s.ResultFilter.Sno)
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(s=>s.ResultFilter.TicketType,new {@class="control-label col-md-3"})
+            <div class="col-md-3">
+                @Html.DisplayFor(s=>s.ResultFilter.TicketType)
+            </div>
+        </div>
+       @if (Model.UserPermissionUser.CanResolveErrorTask())
+        {
+            <input type="submit" value="resolve" class="btn btn-info"/>
+        }
+        
+    </div>
+}
+<a asp-action="List" asp-controller="Ticket">Back to List</a>
