@@ -1,0 +1,45 @@
+﻿@model Ticket_System.ViewModel.AccountModel.Result
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>AccountModel</h4>
+<hr />
+<div class="col-md-12">
+   
+        <form asp-action="Update" asp-controller="Account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @Html.HiddenFor(s=>s.Sno)
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label col-md-3"></label>
+                <div class="col-md-3">
+                    <input asp-for="UserID" class="form-control" />
+                    <span asp-validation-for="UserID" class="text-danger"></span>
+                </div>
+                <label asp-for="Pwd" class="control-label col-md-3"></label>
+                <div class="col-md-3">
+                    <input asp-for="Pwd" class="form-control" />
+                    <span asp-validation-for="Pwd" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+              @Html.LabelFor(s=>s.LoginType,new {@class="control-label col-md-3"})
+              <div class="col-md-3">
+                @Html.DropDownListFor(s=>s.LoginType,Model.DdlLoginType,new {@id="LoginType",@class="form-control"})
+              </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+   
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+

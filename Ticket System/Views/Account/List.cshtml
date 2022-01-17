@@ -1,0 +1,50 @@
+﻿@model Ticket_System.ViewModel.AccountModel
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create" asp-controller="Account">Create New</a>
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PageResult.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.PageResult.LoginType)
+            </th>
+            <th>
+               編輯
+            </th>
+            <th>
+               刪除
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.QueryList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem=>item.LoginType)
+                </td>
+                <td>
+                    @Html.ActionLink("編輯","Edit","Account",new {@id=item.Sno})
+                </td>
+                <td>
+                    @Html.ActionLink("刪除","Delete","Account",new {@id=item.Sno})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
